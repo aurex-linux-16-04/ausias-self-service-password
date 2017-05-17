@@ -1,0 +1,19 @@
+Source: ausias-self-service-password
+Section: admin
+Priority: optional
+Maintainer: Luis Antonio Garcia Gisbert <luisgg@gmail.com>
+Build-Depends: debhelper (>= 7.0)
+Standards-Version: 3.8.4
+
+Package: ausias-self-service-password-settings
+Architecture: all
+Depends: ${misc:Depends}, aurex-transmute, self-service-password (>=1.0-2), ausias-self-service-password-artwork
+Description: Custom settings for self-service-password
+ This package installs and modifies self-service-password web application to
+ meet the requirements of the CIPFP Ausias March environment 
+
+Package: ausias-self-service-password-artwork
+Architecture: all
+Depends: ${misc:Depends}
+Description: logos and images for self-service-password
+ This package contains CIPFP Ausias March environment branding for self-service-password
