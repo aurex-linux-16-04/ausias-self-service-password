@@ -1,3 +1,9 @@
+ausias-self-service-password (0.5) xenial; urgency=medium
+
+  * Added some missing depends
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Mon, 22 May 2017 17:01:52 +0200
+
 ausias-self-service-password (0.4) xenial; urgency=medium
 
   * Valencian translation revised

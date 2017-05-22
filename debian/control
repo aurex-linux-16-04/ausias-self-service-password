@@ -7,7 +7,7 @@ Standards-Version: 3.8.4
 
 Package: ausias-self-service-password-settings
 Architecture: all
-Depends: ${misc:Depends}, aurex-transmute, self-service-password (>=1.0-2), ausias-self-service-password-artwork
+Depends: ${misc:Depends}, aurex-transmute, self-service-password (>=1.0-2), ausias-self-service-password-artwork, libapache2-mod-php, php-xml, php-mbstring, php-ldap, php-mcrypt
 Description: Custom settings for self-service-password
  This package installs and modifies self-service-password web application to
  meet the requirements of the CIPFP Ausias March environment 
