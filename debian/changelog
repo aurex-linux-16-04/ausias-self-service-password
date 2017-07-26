@@ -1,3 +1,11 @@
+ausias-self-service-password (0.7) xenial; urgency=medium
+
+  * Added support for cascade configuration files based on URI path in the form:
+    conf/config.inc.[PATH_COMPONENT].php
+  * Improved translations for va, ca & es
+
+ -- Luis Antonio Garcia Gisbert <luisgg@gmail.com>  Wed, 26 Jul 2017 17:09:18 +0200
+
 ausias-self-service-password (0.6) xenial; urgency=medium
 
   * Added missing ausias background image

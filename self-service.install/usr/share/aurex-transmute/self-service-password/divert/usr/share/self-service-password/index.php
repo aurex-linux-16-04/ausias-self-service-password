@@ -30,6 +30,24 @@ if ($use_recaptcha) {
 require_once("lib/detectbrowserlanguage.php");
 require_once("lib/vendor/PHPMailer/PHPMailerAutoload.php");
 
+#=================================================================================
+# local custom config files for each folder name in URI path (from outer to inner)
+#=================================================================================
+
+if (isset($_SERVER["REQUEST_URI"]) && isset($_SERVER["SCRIPT_FILENAME"])) {
+	$SCR_FILE_LIST = explode("/", $_SERVER["SCRIPT_FILENAME"]);
+	$root_size = sizeof(explode("/", $_SERVER["DOCUMENT_ROOT"]));
+	$scrp_size = sizeof($SCR_FILE_LIST);
+	$n = $root_size ;
+	while ($n < $scrp_size -1 ) {
+		$filename = "conf/config.inc.".$SCR_FILE_LIST[$n].".php";
+		if (file_exists($filename)) {
+			require_once($filename);
+		}
+	        $n++;
+	}
+}
+
 #==============================================================================
 # Language
 #==============================================================================
