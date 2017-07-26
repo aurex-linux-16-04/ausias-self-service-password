@@ -55,7 +55,8 @@ if (isset($_SERVER["REQUEST_URI"]) && isset($_SERVER["SCRIPT_FILENAME"])) {
 $languages = array();
 if ($handle = opendir('lang')) {
     while (false !== ($entry = readdir($handle))) {
-        if ($entry != "." && $entry != "..") {
+        #if ($entry != "." && $entry != "..") {
+	if (preg_match("/\.php$/", $entry)) {
              array_push($languages, str_replace(".inc.php", "", $entry));
         }
     }
